@@ -47,5 +47,14 @@ $(document).ready(function(){
     });
   });
 
+  $(function(){
+    $('marquee').toggle();
+  });
+
+  $(function(){
+    $('#credit').click(function(){
+      $('marquee').toggle();
+    });
+  });
 
 });
