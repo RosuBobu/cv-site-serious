@@ -1,0 +1,239 @@
+/* --------------- ANIMATIONS --------------- */
+
+/* the Typing Effect */
+ @keyframes typing {
+    from { width: 0 }
+    to { width: 100%}
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #05f140; }
+}
+@keyframes shade-in{
+    from{ opacity: 0;}
+    to{ opacity: 1;}
+}
+/* --------------- TRIGGER CLASS --------------- */
+.typewrited_start{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    border-right: .15em solid #05f140; /* The typwriter cursor */
+    animation: 
+      typing 3s steps(40, end),
+      blink-caret .75s step-end infinite;
+}
+.shade-in_short{animation: shade-in ease 1s;}
+.shade-in_medium{animation: shade-in ease 2s;}
+.shade-in_long{animation: shade-in ease 5s;}
+
+/* --------------- OO CLASS --------------- */
+/* .parallax { */
+    /* The image used */
+    /* background-image: url("./assets/pics/parallax1.jpg"); */
+    /* Set a specific height */
+    /* height: 500px; */
+    /* Create the parallax scrolling effect */
+    /* background-attachment: fixed; */
+    /* background-position: bottom; */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+/* } */
+.supergreen{
+    color: #05f140 !important;
+}
+.antiquewhite{
+    color: antiquewhite;
+}
+.border-h-supergreen{
+    border-top: 1px solid #05f140 ;
+    border-bottom: 1px solid #05f140 ;
+}
+.border-t-supergreen{
+    border-top: 1px solid #05f140 ;
+}
+.border-b-supergreen{
+    border-bottom: 1px solid #05f140 ;
+}
+.center{
+    text-align: center;
+}
+.justify{
+    text-align: justify;
+}
+
+.typewrited{
+    white-space: nowrap; /* Keeps the content on a single line */
+    letter-spacing: .15em; /* Adjust as needed */
+}
+
+.parallax{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax-xshort{
+    height: 50px;
+}
+.parallax-short{
+    height: 100px;
+}
+.parallax-medium{
+    height: 250px;
+}
+.parallax-large{
+    height: 500px;
+}
+.parallax-separator{
+    background-image: url("./assets/pics/separator.jpg");
+}
+.parallax-laptop{
+    background-image: url("./assets/pics/laptopVape.jpg");
+}
+.parallax-desk{
+    background-image: url("./assets/pics/desk.jpg");
+}
+/* --------------- GEN --------------- */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt', sans-serif;
+}
+ 
+html{
+    scrollbar-width: thin;
+    scrollbar-color: #05f140 #010101 ;
+
+}
+body{
+    margin: 0;
+    padding: 0;
+
+}
+header{
+    height: 60px;
+    background: url('./assets/pics/nightPine.jpg') top no-repeat;
+    background-size: cover;
+    background-color: #0c0e28;
+    box-shadow:0px 1px 1px #05f140;
+}
+.navbar{height: 100%;}
+
+.navbar.scrolled {
+    background-color: #000 !important;
+    transition: background-color 200ms linear;
+}
+.separator{
+    height: 100px;
+    padding-top: 10px;
+    text-align:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.separator h2{
+    background-color: #010101;
+    color: antiquewhite;
+}
+
+#myquote{
+    height: 200px;
+    width: 100%;
+    text-align: center;
+    background-color: #010101;
+    color: antiquewhite;
+    /* margin-top: 100px; */
+    padding: 100px;
+}
+/* --------------- #DISCOVER --------------- */
+#discover{
+    height: 500px;
+    background-color: #010101;
+}
+#discover .row{
+    height: 100%;
+}
+#discover .colpart{
+    height: 100%;
+    width: 100%;
+}
+#discover .colpart:nth-child(2){
+    background: url('./assets/pics/meSquared.png') top no-repeat;
+    background-size: cover;
+    filter: grayscale(1);
+}
+#discover .colpart:nth-child(2):hover{
+    filter: grayscale(0);
+    transition: ease 0.2s;
+}
+
+/* --------------- #WELCOME --------------- */
+#welcome{
+    background-color: #010101;
+    height: 600px;
+}
+#welcome div{
+    height: 100%;
+}
+#welcome .colpart:nth-child(1){
+    background: url('./assets/pics/nightLaptop.jpg') center no-repeat;
+    background-size: cover;
+    /* border: 1px solid #05f140 ; */
+    border-radius: 2px;
+    /* height: 100%; */
+}
+/* --------------- #NEON --------------- */
+#neon{
+    height: 600px;
+}
+
+#neon .row{
+    background-color: rgba(0, 0, 0, 0.137);
+    height: 100%;
+}
+#neon .colpart{
+    height: 100%;
+}
+#neon .colpart:nth-child(1){
+    background: url('./assets/pics/neonHeart.jpg') center no-repeat;
+    background-size: cover;
+}
+#neon .colpart:nth-child(2){
+    background: url('./assets/pics/neonLevel.jpg') center no-repeat;
+    background-size: cover;
+}
+#neon .colpart:nth-child(3){
+    background: url('./assets/pics/neonDiamond.jpg') center no-repeat;
+    background-size: cover;
+}
+#neon h1{
+    text-align: center;
+    /* text-decoration: #05f140 underline; */
+    color:  antiquewhite;
+    line-height: 0;
+    letter-spacing: 10px;
+}
+#neon .top{
+    margin-top: -20px;
+}
+#neon .bottom{
+    margin-top: 40px;
+    transform: rotate(180deg);
+}
+
+/* --------------- #TASK --------------- */
+#tasks{
+    height: 600px;
+}
+#tasks .row{
+    height: 100%;
+    background: url('./assets/pics/nightLaptop.jpg') center no-repeat;
+    background-color: #010101;
+}
+#tasks .colpart{
+    height: 100%;
+}
+#tasks h3{
+    
+}
