@@ -14,6 +14,10 @@
     from{ opacity: 0;}
     to{ opacity: 1;}
 }
+@keyframes huecool{
+    from{filter: hue-rotate(0deg);}
+    to{filter: hue-rotate(360deg);}
+}
 /* --------------- TRIGGER CLASS --------------- */
 .typewrited_start{
     overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -28,22 +32,12 @@
 .shade-in_long{animation: shade-in ease 5s;}
 
 /* --------------- OO CLASS --------------- */
-/* .parallax { */
-    /* The image used */
-    /* background-image: url("./assets/pics/parallax1.jpg"); */
-    /* Set a specific height */
-    /* height: 500px; */
-    /* Create the parallax scrolling effect */
-    /* background-attachment: fixed; */
-    /* background-position: bottom; */
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-/* } */
-.supergreen{
-    color: #05f140 !important;
-}
-.antiquewhite{
-    color: antiquewhite;
+.supergreen{color: #05f140 !important;}
+.superpink{color: #FF7DE9 !important;}
+.antiquewhite{ color: antiquewhite !important;}
+.border-w-supergreen{
+    border-right: 1px solid rgba(5, 241, 64) ;
+    border-left: 1px solid rgb(5, 241, 64) ;
 }
 .border-h-supergreen{
     border-top: 1px solid #05f140 ;
@@ -55,12 +49,9 @@
 .border-b-supergreen{
     border-bottom: 1px solid #05f140 ;
 }
-.center{
-    text-align: center;
-}
-.justify{
-    text-align: justify;
-}
+.center{ text-align: center !important;}
+.justify{ text-align: justify !important;}
+.right{text-align: right !important;}
 
 .typewrited{
     white-space: nowrap; /* Keeps the content on a single line */
@@ -73,59 +64,45 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-.parallax-xshort{
-    height: 50px;
-}
-.parallax-short{
-    height: 100px;
-}
-.parallax-medium{
-    height: 250px;
-}
-.parallax-large{
-    height: 500px;
-}
-.parallax-separator{
-    background-image: url("./assets/pics/separator.jpg");
-}
-.parallax-laptop{
-    background-image: url("./assets/pics/laptopVape.jpg");
-}
-.parallax-desk{
-    background-image: url("./assets/pics/desk.jpg");
-}
+.parallax-xshort{height: 50px;}
+.parallax-short{height: 100px;}
+.parallax-medium{height: 250px;}
+.parallax-large{height: 500px;}
+.parallax-separator{background-image: url("./assets/pics/separator.jpg");}
+.parallax-laptop{background-image: url("./assets/pics/laptopVape.jpg");}
+.parallax-desk{background-image: url("./assets/pics/desk.jpg");}
+.parallax-meetme{ background-image: url("./assets/pics/meetme.jpg");}
 /* --------------- GEN --------------- */
 *{
     margin: 0;
     padding: 0;
     font-family: 'Prompt', sans-serif;
 }
- 
 html{
     scrollbar-width: thin;
     scrollbar-color: #05f140 #010101 ;
-
+    margin: 0;
+    padding: 0;
 }
 body{
     margin: 0;
     padding: 0;
-
 }
 header{
     height: 60px;
-    background: url('./assets/pics/nightPine.jpg') top no-repeat;
+    background: url('./assets/pics/dusk.jpg') center no-repeat;
     background-size: cover;
     background-color: #0c0e28;
     box-shadow:0px 1px 1px #05f140;
 }
+p{font-size: 1.2em;}
 .navbar{height: 100%;}
-
 .navbar.scrolled {
     background-color: #000 !important;
     transition: background-color 200ms linear;
 }
 .separator{
-    height: 100px;
+    height: 50px;
     padding-top: 10px;
     text-align:center;
     display: flex;
@@ -146,9 +123,16 @@ header{
     /* margin-top: 100px; */
     padding: 100px;
 }
+footer{
+    height: 300px;
+    background: url('./assets/pics/dusk.jpg') center no-repeat;
+    background-size: cover;
+    background-color: #0c0e28;
+    box-shadow:0px 1px 1px #05f140;
+}
 /* --------------- #DISCOVER --------------- */
 #discover{
-    height: 500px;
+    height: 600px;
     background-color: #010101;
 }
 #discover .row{
@@ -158,12 +142,12 @@ header{
     height: 100%;
     width: 100%;
 }
-#discover .colpart:nth-child(2){
-    background: url('./assets/pics/meSquared.png') top no-repeat;
-    background-size: cover;
+#discover .colpart:nth-child(3){
+    background: url('./assets/logos/avatar.svg') top no-repeat;
+    background-size: contain;
     filter: grayscale(1);
 }
-#discover .colpart:nth-child(2):hover{
+#discover .colpart:nth-child(3):hover{
     filter: grayscale(0);
     transition: ease 0.2s;
 }
@@ -177,7 +161,8 @@ header{
     height: 100%;
 }
 #welcome .colpart:nth-child(1){
-    background: url('./assets/pics/nightLaptop.jpg') center no-repeat;
+    background: linear-gradient(to right,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),
+        url('./assets/pics/wireServer.jpg') center no-repeat;
     background-size: cover;
     /* border: 1px solid #05f140 ; */
     border-radius: 2px;
@@ -234,6 +219,67 @@ header{
 #tasks .colpart{
     height: 100%;
 }
-#tasks h3{
-    
+/* --------------- #SKILLS --------------- */
+
+#skills{
+    height: 600px;
 }
+#skills .row{
+    height: 100%;
+    background: url('./assets/pics/bulb.jpg');
+    background-size: cover;
+    background-color: #010101;
+}
+#skills .colpart{
+    height: 100%;
+}
+/* --------------- #STEPS --------------- */
+#steps{
+    height: 500px;
+}
+#steps .row{
+    height: 100%;
+    /* width: 100%; */
+    background-color: #010101;
+}
+#steps .colpart{
+    height: 100%;
+}
+#steps .row:nth-child(1), #steps .row:nth-child(3){
+    height: 50px;
+}
+#steps .row:nth-child(2){
+    height: 400px;
+}
+#steps .colpart:nth-child(1){
+    background: url('./assets/pics/step1.jpg') center no-repeat;
+}
+#steps .colpart:nth-child(2){
+    background: url('./assets/pics/step2.jpg') center no-repeat;
+}
+#steps .colpart:nth-child(3){
+    background: url('./assets/pics/step3.jpg') center no-repeat;
+}
+#steps h2, #steps ul li{background-color: rgba(0, 0, 0, 0.5);}
+#steps ul{list-style: none;}
+#steps ul li{ text-decoration:underline; font-size: 1.2em; text-align: center;}
+
+/* --------------- #DONOTWAIT --------------- */
+#donotwait{
+    height: 600px; 
+    animation: huecool 1s ease infinite;
+}
+#donotwait .row{
+    height: 100%;
+    background: url('./assets/logos/avatar.svg') center no-repeat;
+    background-size: cover;
+    background-color: #010101;
+}
+#donotwait .colpart{
+    height: 100%;
+    animation: none;
+}
+
+
+
+
